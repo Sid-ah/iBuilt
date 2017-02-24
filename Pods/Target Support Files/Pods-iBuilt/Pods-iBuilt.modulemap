@@ -1,0 +1,6 @@
+framework module Pods_iBuilt {
+  umbrella header "Pods-iBuilt-umbrella.h"
+
+  export *
+  module * { export * }
+}
