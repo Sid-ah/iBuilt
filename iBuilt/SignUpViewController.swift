@@ -75,14 +75,19 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                         
                         if let url = url {
                             
-                            let  userInfo: [String : Any] = ["uid" : user.uid,
-                                                             "full name" : self.NameField.text!,
-                                                             "urlToImage" : url.absoluteString]
-                            
-                            self.ref.child("users").child(user.uid).setValue(userInfo)
-                            
-                            let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "usersVC")
-                            self.present(VC, animated: true, completion: nil)
+                            self.ref.child("users/counter").observeSingleEvent(of: .value, with: { (snapshot) in
+                                let counter = snapshot.value as! Int
+                                
+                                let  userInfo: [String : Any] = ["uid" : user.uid,
+                                                                 "full name" : self.NameField.text!,
+                                                                 "urlToImage" : url.absoluteString,
+                                                                 "user_id": counter]
+                                self.ref.child("counter").setValue(counter + 1)
+                                self.ref.child("users").child(user.uid).setValue(userInfo)
+                                
+                                let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "usersVC")
+                                self.present(VC, animated: true, completion: nil)
+                            })
                             
                         }
                         
