@@ -17,6 +17,9 @@
 		095ED0C11E60A1E3009F29DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 095ED0C01E60A1E3009F29DD /* GoogleService-Info.plist */; };
 		09E658351E60BFF2002BD6DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E658341E60BFF2002BD6DB /* LoginViewController.swift */; };
 		E83A898585B34D6F24F072E2 /* Pods_iBuilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D761402A26E4AD51173DE258 /* Pods_iBuilt.framework */; };
+		F4D8F83E1E61E3800045B4B4 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8F83D1E61E3800045B4B4 /* BookmarksViewController.swift */; };
+		F4D8F8401E61E38D0045B4B4 /* ManualsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8F83F1E61E38D0045B4B4 /* ManualsViewController.swift */; };
+		F4D8F8421E61F62B0045B4B4 /* ManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8F8411E61F62B0045B4B4 /* ManualViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		4F50501DBEEBC33AA64C8C33 /* Pods-iBuilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBuilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBuilt/Pods-iBuilt.debug.xcconfig"; sourceTree = "<group>"; };
 		9EEE0422DDF22C89C49A602E /* Pods-iBuilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBuilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBuilt/Pods-iBuilt.release.xcconfig"; sourceTree = "<group>"; };
 		D761402A26E4AD51173DE258 /* Pods_iBuilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBuilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D8F83D1E61E3800045B4B4 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		F4D8F83F1E61E38D0045B4B4 /* ManualsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualsViewController.swift; sourceTree = "<group>"; };
+		F4D8F8411E61F62B0045B4B4 /* ManualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,9 @@
 				095ED0C01E60A1E3009F29DD /* GoogleService-Info.plist */,
 				093EC8B51E60A60F00382937 /* SignUpViewController.swift */,
 				09E658341E60BFF2002BD6DB /* LoginViewController.swift */,
+				F4D8F83D1E61E3800045B4B4 /* BookmarksViewController.swift */,
+				F4D8F83F1E61E38D0045B4B4 /* ManualsViewController.swift */,
+				F4D8F8411E61F62B0045B4B4 /* ManualViewController.swift */,
 			);
 			path = iBuilt;
 			sourceTree = "<group>";
@@ -341,8 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D8F83E1E61E3800045B4B4 /* BookmarksViewController.swift in Sources */,
 				09E658351E60BFF2002BD6DB /* LoginViewController.swift in Sources */,
 				093EC8B61E60A60F00382937 /* SignUpViewController.swift in Sources */,
+				F4D8F8401E61E38D0045B4B4 /* ManualsViewController.swift in Sources */,
+				F4D8F8421E61F62B0045B4B4 /* ManualViewController.swift in Sources */,
 				095ED0931E60A18E009F29DD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
