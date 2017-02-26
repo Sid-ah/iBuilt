@@ -53,6 +53,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             FIRAuth.auth()?.createUser(withEmail: EmailField.text!, password: PasswordField.text!, completion: { (user, error) in
                 
                 if let error = error {
+                    let alert = UIAlertController(title: "Error", message: error
+                        .localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                        alert.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    print("------------------------------")
+                    print("------------------------------")
+                    print("------------------------------")
                     print(error.localizedDescription)
                 }
                 
@@ -71,6 +80,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                       imageRef.downloadURL(completion: { (url, error) in
                         if error != nil {
                             print(error!.localizedDescription)
+                            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                                alert.dismiss(animated: true, completion: nil)
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            print("------------------------------")
+                            print("------------------------------")
+                            print("------------------------------")
                         }
                         
                         if let url = url {
@@ -82,8 +99,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                                                                  "full name" : self.NameField.text!,
                                                                  "urlToImage" : url.absoluteString,
                                                                  "user_id": counter]
-                                self.ref.child("counter").setValue(counter + 1)
+                                print("------------------------------")
+                                print("\(self.ref.child("counter"))")
+                                print("------------------------------")
+                                self.ref.child("users/counter").setValue(counter + 1)
                                 self.ref.child("users").child(user.uid).setValue(userInfo)
+                                print("------------------------------")
+                                print("\(self.ref.child("counter"))")
+                                print("------------------------------")
                                 
                                 let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "usersVC")
                                 self.present(VC, animated: true, completion: nil)
@@ -103,6 +126,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             
         } else {
             
+            let alert = UIAlertController(title: "Error", message: "Password does not match", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+            print("------------------------------")
+            print("------------------------------")
+            print("------------------------------")
             print("Password does not match")
             
         }

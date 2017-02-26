@@ -21,6 +21,14 @@ class ManualViewController: UIViewController {
         nameLabel.text = theManual["name"] as? String
         descriptionLabel.text = theManual["description"] as? String
         viewPDFButton.setTitle("View Instructions", for: .normal)
+        
+        // Display an image for a given manual
+        
+//        let setUrl = URL(string: theManual["image"] as! String)
+//        let imageUrl = NSData(contentsOf: setUrl!)
+//        let Renderimage: UIImageView = UIImageView(frame:CGRectMake(CGFloat((160), CGFloat(130), 60, 60))
+//        RenderImage.image = UIImage(data: imageUrl)
+//        self.view.addSubview(RenderImage)
     }
     
     @IBAction func viewPDFClicked(_ sender: Any) {
