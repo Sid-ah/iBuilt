@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var manualsTableView: UITableView!
     var manuals = [[String: AnyObject]]()
@@ -32,6 +32,17 @@ class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         task2.resume()
     }
+    
+    func createSearchbar(){
+        
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "Enter your search here"
+        searchBar.delegate=self
+        
+        self.navigationItem.titleView = searchBar
+    }
+
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
