@@ -17,7 +17,7 @@ class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = NSURL(string: "https://dbc-phase3-kenobi82403.c9users.io/api/manuals/")
+        let url = NSURL(string: "https://frozen-garden-21267.herokuapp.com/api/manuals")
         var request = URLRequest(url: url! as URL)
         request.httpMethod = "GET"
         let task2 = URLSession.shared.dataTask(with: request) { data, response, error in
