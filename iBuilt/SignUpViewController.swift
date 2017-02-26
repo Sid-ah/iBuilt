@@ -53,6 +53,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             FIRAuth.auth()?.createUser(withEmail: EmailField.text!, password: PasswordField.text!, completion: { (user, error) in
                 
                 if let error = error {
+                    let alert = UIAlertController(title: "Error", message: error
+                        .localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                        alert.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    print("------------------------------")
+                    print("------------------------------")
+                    print("------------------------------")
                     print(error.localizedDescription)
                 }
                 
@@ -71,6 +80,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                       imageRef.downloadURL(completion: { (url, error) in
                         if error != nil {
                             print(error!.localizedDescription)
+                            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                                alert.dismiss(animated: true, completion: nil)
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            print("------------------------------")
+                            print("------------------------------")
+                            print("------------------------------")
                         }
                         
                         if let url = url {
@@ -103,6 +120,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             
         } else {
             
+            let alert = UIAlertController(title: "Error", message: "Password does not match", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+            print("------------------------------")
+            print("------------------------------")
+            print("------------------------------")
             print("Password does not match")
             
         }
