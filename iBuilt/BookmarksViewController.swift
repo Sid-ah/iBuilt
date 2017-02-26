@@ -9,14 +9,20 @@
 import UIKit
 import Firebase
 
-class BookmarksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BookmarksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    @IBOutlet weak var manualsTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var bookmarksTableView: UITableView!
     
     var bookmarks = [[String: AnyObject]]()
-    @IBOutlet weak var bookmarksTableView: UITableView!
     var ref: FIRDatabaseReference!
+    var filteredData: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createSearchbar()
+        
         ref = FIRDatabase.database().reference()
         let userId = FIRAuth.auth()!.currentUser!.uid
         print("userId is: \(userId)")
@@ -50,6 +56,9 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let searchCell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as UITableViewCell
+        searchCell.textLabel?.text = filteredData[indexPath.row]
+        
         let cell = UITableViewCell()
         let theManual = bookmarks[indexPath.row]
         cell.textLabel?.text = theManual["name"] as? String
@@ -79,4 +88,14 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         return nil
     }
+    func createSearchbar(){
+        
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "Enter your search here"
+        searchBar.delegate=self
+        
+        self.navigationItem.titleView = searchBar
+    }
+
 }

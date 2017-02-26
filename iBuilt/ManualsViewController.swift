@@ -10,11 +10,16 @@ import UIKit
 
 class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var manualsTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var manuals = [[String: AnyObject]]()
+    var filteredData: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createSearchbar()
 
         // Do any additional setup after loading the view.
         let url = NSURL(string: "https://dbc-phase3-kenobi82403.c9users.io/api/manuals/")
@@ -32,17 +37,6 @@ class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         task2.resume()
     }
-    
-    func createSearchbar(){
-        
-        let searchBar = UISearchBar()
-        searchBar.showsCancelButton = false
-        searchBar.placeholder = "Enter your search here"
-        searchBar.delegate=self
-        
-        self.navigationItem.titleView = searchBar
-    }
-
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -53,6 +47,9 @@ class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let searchCell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as UITableViewCell
+        searchCell.textLabel?.text = filteredData[indexPath.row]
+
         let cell = UITableViewCell()
         let theManual = manuals[indexPath.row]
         cell.textLabel?.text = theManual["name"] as? String
@@ -81,5 +78,30 @@ class ManualsViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         return nil
+    }
+    
+    
+    func createSearchbar(){
+        
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "Enter your search here"
+        searchBar.delegate=self
+        
+        self.navigationItem.titleView = searchBar
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // When there is no text, filteredData is the same as the original data
+        // When user has entered text into the search box
+        // Use the filter method to iterate over all items in the data array
+        // For each item, return true if the item should be included and false if the
+        // item should NOT be included
+//        filteredData = searchText.isEmpty ? data : data.filter { (item: String) -> Bool in
+            // If dataItem matches the searchText, return true to include it
+//            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+//        }
+        
+        tableView.reloadData()
     }
 }

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -219,39 +220,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Manuals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-YI-P5J">
-                                <frame key="frameInset" minX="54" minY="39" width="267" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VMI-s9-xka">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VMI-s9-xka" secondAttribute="height" multiplier="343:502" id="uK0-lC-etW"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="4N0-Si-ei9" id="gdX-FH-CO7"/>
                                     <outlet property="delegate" destination="4N0-Si-ei9" id="cKM-bE-4P2"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-4W-Zu9">
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manuals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUe-5m-GDX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ol6-4W-Zu9" firstAttribute="centerX" secondItem="Gof-YI-P5J" secondAttribute="centerX" id="7hw-29-AeC"/>
                             <constraint firstItem="ywC-YB-3Wp" firstAttribute="top" secondItem="VMI-s9-xka" secondAttribute="bottom" constant="8" symbolic="YES" id="7wZ-Hk-FGI"/>
-                            <constraint firstItem="ol6-4W-Zu9" firstAttribute="leading" secondItem="DeY-fz-cii" secondAttribute="leading" id="9Fz-uk-s68"/>
                             <constraint firstItem="VMI-s9-xka" firstAttribute="leading" secondItem="DeY-fz-cii" secondAttribute="leadingMargin" id="Gck-dA-D6p"/>
-                            <constraint firstItem="ol6-4W-Zu9" firstAttribute="centerX" secondItem="VMI-s9-xka" secondAttribute="centerX" id="J8F-DQ-Fit"/>
-                            <constraint firstItem="ol6-4W-Zu9" firstAttribute="top" secondItem="bDx-34-XGg" secondAttribute="bottom" id="OiP-C8-MHP"/>
-                            <constraint firstItem="VMI-s9-xka" firstAttribute="top" secondItem="ol6-4W-Zu9" secondAttribute="bottom" constant="8" id="ctO-97-evu"/>
-                            <constraint firstAttribute="trailing" secondItem="ol6-4W-Zu9" secondAttribute="trailing" id="g1g-JI-giJ"/>
+                            <constraint firstItem="vUe-5m-GDX" firstAttribute="top" secondItem="bDx-34-XGg" secondAttribute="bottom" constant="52" id="WV4-2y-mzH"/>
+                            <constraint firstItem="vUe-5m-GDX" firstAttribute="leading" secondItem="DeY-fz-cii" secondAttribute="leadingMargin" constant="65" id="Wqa-51-LYk"/>
+                            <constraint firstItem="VMI-s9-xka" firstAttribute="centerX" secondItem="vUe-5m-GDX" secondAttribute="centerX" id="ZcS-nr-oEq"/>
+                            <constraint firstItem="VMI-s9-xka" firstAttribute="trailing" secondItem="DeY-fz-cii" secondAttribute="trailingMargin" id="hAJ-Lq-Zqp"/>
+                            <constraint firstItem="ywC-YB-3Wp" firstAttribute="top" secondItem="vUe-5m-GDX" secondAttribute="bottom" constant="458" id="sqP-Y8-eZx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PHh-hF-wvk"/>
                     <connections>
-                        <outlet property="manualsTableView" destination="VMI-s9-xka" id="PaX-C5-2op"/>
+                        <outlet property="manualsTableView" destination="VMI-s9-xka" id="I2K-4Y-weg"/>
                         <outlet property="searchDisplayController" destination="hMp-NL-rTm" id="KVk-pE-uMd"/>
+                        <outlet property="tableView" destination="VMI-s9-xka" id="u5b-uB-twI"/>
                         <segue destination="cgo-eY-I2T" kind="show" identifier="viewManualSegue" id="9Ql-ML-u3F"/>
                     </connections>
                 </viewController>
@@ -352,17 +352,12 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bookmarks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAC-dy-eOg">
-                                <frame key="frameInset" minX="89" minY="96" width="213" height="44"/>
+                                <frame key="frameInset" minX="89" minY="113" width="213" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUv-aY-cmp">
-                                <frame key="frameInset" minY="64" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -457,6 +452,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w6A-Wu-dsC"/>
-        <segue reference="T5L-O2-wPJ"/>
+        <segue reference="9Ql-ML-u3F"/>
     </inferredMetricsTieBreakers>
 </document>
