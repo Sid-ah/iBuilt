@@ -23,7 +23,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         self.ref.child("users/\(userId)/user_id").observeSingleEvent(of: .value, with: { (snapshot) in
             let user_id = snapshot.value as! Int
             // Do any additional setup after loading the view.
-            let url = NSURL(string: "https://dbc-phase3-kenobi82403.c9users.io/api/manuals/\(user_id)")
+            let url = NSURL(string: "https://frozen-garden-21267.herokuapp.com/api/manuals\(user_id)")
             print("making request to url \(url?.absoluteURL)")
             var request = URLRequest(url: url! as URL)
             request.httpMethod = "GET"
