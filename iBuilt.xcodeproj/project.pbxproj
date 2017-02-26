@@ -16,6 +16,8 @@
 		095ED0B31E60A18E009F29DD /* iBuiltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095ED0B21E60A18E009F29DD /* iBuiltUITests.swift */; };
 		095ED0C11E60A1E3009F29DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 095ED0C01E60A1E3009F29DD /* GoogleService-Info.plist */; };
 		09E658351E60BFF2002BD6DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E658341E60BFF2002BD6DB /* LoginViewController.swift */; };
+		09F5ADAE1E6266EF00797467 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F5ADAD1E6266EF00797467 /* Search.xib */; };
+		09F5ADB01E6269ED00797467 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5ADAF1E6269ED00797467 /* SearchViewController.swift */; };
 		E83A898585B34D6F24F072E2 /* Pods_iBuilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D761402A26E4AD51173DE258 /* Pods_iBuilt.framework */; };
 		F4D8F83E1E61E3800045B4B4 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8F83D1E61E3800045B4B4 /* BookmarksViewController.swift */; };
 		F4D8F8401E61E38D0045B4B4 /* ManualsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8F83F1E61E38D0045B4B4 /* ManualsViewController.swift */; };
@@ -55,6 +57,8 @@
 		095ED0B41E60A18E009F29DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095ED0C01E60A1E3009F29DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09E658341E60BFF2002BD6DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		09F5ADAD1E6266EF00797467 /* Search.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
+		09F5ADAF1E6269ED00797467 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4F50501DBEEBC33AA64C8C33 /* Pods-iBuilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBuilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBuilt/Pods-iBuilt.debug.xcconfig"; sourceTree = "<group>"; };
 		9EEE0422DDF22C89C49A602E /* Pods-iBuilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBuilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBuilt/Pods-iBuilt.release.xcconfig"; sourceTree = "<group>"; };
 		D761402A26E4AD51173DE258 /* Pods_iBuilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBuilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +128,9 @@
 				09E658341E60BFF2002BD6DB /* LoginViewController.swift */,
 				F4D8F83D1E61E3800045B4B4 /* BookmarksViewController.swift */,
 				F4D8F83F1E61E38D0045B4B4 /* ManualsViewController.swift */,
+				09F5ADAD1E6266EF00797467 /* Search.xib */,
 				F4D8F8411E61F62B0045B4B4 /* ManualViewController.swift */,
+				09F5ADAF1E6269ED00797467 /* SearchViewController.swift */,
 			);
 			path = iBuilt;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				095ED09D1E60A18E009F29DD /* LaunchScreen.storyboard in Resources */,
 				095ED0C11E60A1E3009F29DD /* GoogleService-Info.plist in Resources */,
 				095ED09A1E60A18E009F29DD /* Assets.xcassets in Resources */,
+				09F5ADAE1E6266EF00797467 /* Search.xib in Resources */,
 				095ED0981E60A18E009F29DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D8F83E1E61E3800045B4B4 /* BookmarksViewController.swift in Sources */,
+				09F5ADB01E6269ED00797467 /* SearchViewController.swift in Sources */,
 				09E658351E60BFF2002BD6DB /* LoginViewController.swift in Sources */,
 				093EC8B61E60A60F00382937 /* SignUpViewController.swift in Sources */,
 				F4D8F8401E61E38D0045B4B4 /* ManualsViewController.swift in Sources */,
