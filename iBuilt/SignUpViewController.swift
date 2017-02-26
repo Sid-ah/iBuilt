@@ -99,8 +99,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                                                                  "full name" : self.NameField.text!,
                                                                  "urlToImage" : url.absoluteString,
                                                                  "user_id": counter]
-                                self.ref.child("counter").setValue(counter + 1)
+                                print("------------------------------")
+                                print("\(self.ref.child("counter"))")
+                                print("------------------------------")
+                                self.ref.child("users/counter").setValue(counter + 1)
                                 self.ref.child("users").child(user.uid).setValue(userInfo)
+                                print("------------------------------")
+                                print("\(self.ref.child("counter"))")
+                                print("------------------------------")
                                 
                                 let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "usersVC")
                                 self.present(VC, animated: true, completion: nil)

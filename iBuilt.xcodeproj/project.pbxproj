@@ -15,6 +15,8 @@
 		095ED0A81E60A18E009F29DD /* iBuiltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095ED0A71E60A18E009F29DD /* iBuiltTests.swift */; };
 		095ED0B31E60A18E009F29DD /* iBuiltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095ED0B21E60A18E009F29DD /* iBuiltUITests.swift */; };
 		095ED0C11E60A1E3009F29DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 095ED0C01E60A1E3009F29DD /* GoogleService-Info.plist */; };
+		09D63CF81E62669C00CE6BAE /* Log-in-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D63CF71E62669C00CE6BAE /* Log-in-button@2x.png */; };
+		09D63CFA1E6266B600CE6BAE /* ibuilt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D63CF91E6266B600CE6BAE /* ibuilt.png */; };
 		09E658351E60BFF2002BD6DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E658341E60BFF2002BD6DB /* LoginViewController.swift */; };
 		E83A898585B34D6F24F072E2 /* Pods_iBuilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D761402A26E4AD51173DE258 /* Pods_iBuilt.framework */; };
 		F4D8F83E1E61E3800045B4B4 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8F83D1E61E3800045B4B4 /* BookmarksViewController.swift */; };
@@ -54,6 +56,8 @@
 		095ED0B21E60A18E009F29DD /* iBuiltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBuiltUITests.swift; sourceTree = "<group>"; };
 		095ED0B41E60A18E009F29DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095ED0C01E60A1E3009F29DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09D63CF71E62669C00CE6BAE /* Log-in-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Log-in-button@2x.png"; sourceTree = "<group>"; };
+		09D63CF91E6266B600CE6BAE /* ibuilt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibuilt.png; sourceTree = "<group>"; };
 		09E658341E60BFF2002BD6DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4F50501DBEEBC33AA64C8C33 /* Pods-iBuilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBuilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBuilt/Pods-iBuilt.debug.xcconfig"; sourceTree = "<group>"; };
 		9EEE0422DDF22C89C49A602E /* Pods-iBuilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBuilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBuilt/Pods-iBuilt.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			children = (
 				095ED0911E60A18E009F29DD /* iBuilt */,
 				095ED0A61E60A18E009F29DD /* iBuiltTests */,
+				09D63CF61E62666C00CE6BAE /* images */,
 				095ED0B11E60A18E009F29DD /* iBuiltUITests */,
 				095ED0901E60A18E009F29DD /* Products */,
 				4764B1E840FAF4DC0B5ED565 /* Pods */,
@@ -145,6 +150,15 @@
 				095ED0B41E60A18E009F29DD /* Info.plist */,
 			);
 			path = iBuiltUITests;
+			sourceTree = "<group>";
+		};
+		09D63CF61E62666C00CE6BAE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				09D63CF71E62669C00CE6BAE /* Log-in-button@2x.png */,
+				09D63CF91E6266B600CE6BAE /* ibuilt.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		4764B1E840FAF4DC0B5ED565 /* Pods */ = {
@@ -276,7 +290,9 @@
 			files = (
 				095ED09D1E60A18E009F29DD /* LaunchScreen.storyboard in Resources */,
 				095ED0C11E60A1E3009F29DD /* GoogleService-Info.plist in Resources */,
+				09D63CFA1E6266B600CE6BAE /* ibuilt.png in Resources */,
 				095ED09A1E60A18E009F29DD /* Assets.xcassets in Resources */,
+				09D63CF81E62669C00CE6BAE /* Log-in-button@2x.png in Resources */,
 				095ED0981E60A18E009F29DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
