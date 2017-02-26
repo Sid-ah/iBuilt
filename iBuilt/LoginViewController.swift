@@ -25,6 +25,15 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: EmailTextField.text!, password: PasswordTextField.text!, completion: { (user, error) in
             
             if let error = error {
+                
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+                print("------------------------------")
+                print("------------------------------")
+                print("------------------------------")
                 print(error.localizedDescription)
             }
             
