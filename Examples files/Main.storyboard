@@ -182,6 +182,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goBack:" destination="dq2-hE-WHH" eventType="touchUpInside" id="wee-An-Fs3"/>
+                                    <segue destination="yfP-QK-Es5" kind="push" id="2tv-OJ-FBb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,7 +329,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-3r-OSl">
-                                <rect key="frame" x="134" y="72" width="116" height="45"/>
+                                <rect key="frame" x="134" y="28" width="116" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="abw-dF-gwK"/>
                                     <constraint firstAttribute="width" constant="116" id="gwN-af-bi7"/>
@@ -348,7 +349,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZQ-sg-7HE">
-                                <rect key="frame" x="25" y="140" width="334" height="21"/>
+                                <rect key="frame" x="25" y="96" width="334" height="65"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -388,6 +389,7 @@
                             <constraint firstItem="6gb-sz-N9R" firstAttribute="top" secondItem="WE8-SP-LAE" secondAttribute="bottom" constant="24" id="wMy-hJ-2oe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="deh-BR-CNV"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="WE8-SP-LAE" id="p78-0q-cT3"/>
                         <outlet property="nameLabel" destination="pZQ-sg-7HE" id="FoE-ah-LZh"/>
@@ -644,7 +646,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OQO-UH-sip"/>
+        <segue reference="2tv-OJ-FBb"/>
         <segue reference="2Su-Lx-ogV"/>
     </inferredMetricsTieBreakers>
 </document>
