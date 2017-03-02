@@ -23,6 +23,7 @@
 		09952E3C1E669BA4003CD38E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09952E3B1E669BA4003CD38E /* SignUpViewController.swift */; };
 		09952F101E66A77A003CD38E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09952F0F1E66A77A003CD38E /* GoogleService-Info.plist */; };
 		09952F121E66A7C8003CD38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09952F111E66A7C8003CD38E /* AppDelegate.swift */; };
+		09A039221E6794D000E2AAFE /* Screen Shot 2017-03-01 at 6.45.24 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A039211E6794D000E2AAFE /* Screen Shot 2017-03-01 at 6.45.24 PM.png */; };
 		0A6E40B5AF9A196EB2C6979A /* Bulk_Generics_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37E348319C90870179E8CA20 /* Bulk_Generics_1.cpp */; };
 		0C5842C69F365BB344D899F9 /* UnityClassRegistration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681F41C0BB8CD8F452CD19F9 /* UnityClassRegistration.cpp */; };
 		0EC5464F910B796D04E38BAE /* Il2CppCompilerCalculateTypeValues_0Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512741FAA5B034EF152C1AA6 /* Il2CppCompilerCalculateTypeValues_0Table.cpp */; };
@@ -372,6 +373,7 @@
 		09952F0E1E66A208003CD38E /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		09952F0F1E66A77A003CD38E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09952F111E66A7C8003CD38E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09A039211E6794D000E2AAFE /* Screen Shot 2017-03-01 at 6.45.24 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-03-01 at 6.45.24 PM.png"; sourceTree = "<group>"; };
 		0AF34890B68CC4277F7AD11A /* Il2CppCompilerCalculateTypeValues_16Table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCompilerCalculateTypeValues_16Table.cpp; path = Classes/Native/Il2CppCompilerCalculateTypeValues_16Table.cpp; sourceTree = SOURCE_ROOT; };
 		0B64483D905C9B32D5BD63E6 /* Il2CppGenericMethodDefinitions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericMethodDefinitions.cpp; path = Classes/Native/Il2CppGenericMethodDefinitions.cpp; sourceTree = SOURCE_ROOT; };
 		0E4E4561969542843E5F829E /* Bulk_Generics_4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Generics_4.cpp; path = Classes/Native/Bulk_Generics_4.cpp; sourceTree = SOURCE_ROOT; };
@@ -1324,6 +1326,7 @@
 				CCE8C2B9135C7EA3000D8035 /* Security.framework */,
 				AA31BF961B55660D0013FB1B /* Data */,
 				56C56C9717D6015100616839 /* Images.xcassets */,
+				09A039211E6794D000E2AAFE /* Screen Shot 2017-03-01 at 6.45.24 PM.png */,
 				D82DCFB50E8000A5005D6AD8 /* Classes */,
 				5623C57817FDCB0800090B9E /* Unity-iPhone Tests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -1646,6 +1649,7 @@
 				37C649DB8B38E872F10C817B /* LaunchScreen-iPhone.xib in Resources */,
 				8E7D471689E15469B73D9244 /* LaunchScreen-iPhonePortrait.png in Resources */,
 				A8F14F28A80D5DEDFF06EE20 /* LaunchScreen-iPhoneLandscape.png in Resources */,
+				09A039221E6794D000E2AAFE /* Screen Shot 2017-03-01 at 6.45.24 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -80,7 +80,7 @@ extern "C" void VuforiaRenderEvent(int marker);
     _rootView               = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _rootController.view    = _rootView;
     
-    MainViewController *mainVC       = [storyBoard instantiateViewControllerWithIdentifier:@"idMainViewController"];
+    MainViewController *mainVC       = [storyBoard instantiateViewControllerWithIdentifier:@"idLoginViewController"];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:mainVC];
     
